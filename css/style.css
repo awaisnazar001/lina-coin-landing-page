@@ -1,0 +1,889 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Utility Classes */
+.btn{
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-size: .8rem;
+    font-weight: 1000;
+    border: none;
+    background-color: #223AFF;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background:none;
+    color: #223AFF;
+    border: none;
+    transition: .2s all ease-in;
+}
+
+p{
+    text-align: justify;
+    color: black;
+}
+
+.active {
+    border-bottom: solid rgb(51, 73, 243);
+}
+
+.white-bg{
+    background: white;
+}
+
+.black-c{
+    color: black;
+}
+/* Main CSS */
+
+.main-container{
+    display: grid;
+    grid-template-rows: 70px 2fr;
+}
+
+/* Header CSS */
+header{
+    width: 100%;
+}
+
+.navbar{
+    display: grid;
+    grid-template-columns: .2fr auto 1fr;
+    align-items: center;
+    height: 80px;
+    width: 90%;
+    max-width: 1720px;
+    margin: 0 auto;
+}
+
+#navbar-logo{
+    justify-self: start;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.nav-menu{
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    text-align: center;
+    width: 70%;
+    justify-self: end;
+    position: absolute;
+}
+
+.nav-links{
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.nav-links:hover{
+    color: #223AFF;
+    border-bottom: solid #223AFF;
+    transition: all 0.1s;
+}
+
+.nav-links-btn{
+    background: #223AFF;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 10px 20px;
+}
+
+.nav-links-btn:hover{
+    border: none;
+    color: #223AFF;
+    background: transparent;
+    transition: all .5s ease-in;
+}
+
+#ham-icon{
+    opacity: 0;
+    color: black;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#navbar{
+    z-index: 2;
+}
+
+/* Main CSS */
+
+main{
+    display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+}
+
+main section{
+    width: 100%;
+}
+
+#hero-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+    background: url("../images/hero\ bg.svg") no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-attachment: scroll;
+}
+
+.headline{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.headline h1{
+    font-size: 3.125rem;
+    color: white;
+}
+
+.headline p{
+    color: white;
+    width: 80%;
+}
+
+.headline .btn{
+    font-weight: bold;
+    padding: 12px 30px;
+}
+
+#whitepaper:hover{
+    background-color: white;
+    color: #223AFF;
+    outline: 1px solid white;
+}
+
+#howtobuy:hover{
+    color: white;
+}
+
+.countdown{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    
+}
+
+.countdown .card{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+    padding: 15px 40px;
+    border-radius: 30px;
+    max-width: 600px;
+    min-width: 500px;
+    min-height: 500px;
+    max-height: 500px;
+    box-shadow: 0 25px 2px -12px rgba(255, 255, 255, 0.172);
+
+}
+
+.countdown .card .timer{
+    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(7, auto);
+    place-items: center;
+    width: 80%;
+    position: relative;
+}
+
+.countdown .card h2{
+    color: black;
+}
+
+.countdown .card .timer div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: white;
+    padding: 10px;
+    height: 100%;
+    width: 80px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02),
+                0 2px 4px rgba(0,0,0,0.02),
+                0 4px 8px rgba(0,0,0,0.02),
+                0 8px 16px rgba(0,0,0,0.02),
+                0 16px 32px rgba(0,0,0,0.02),
+                0 32px 64px rgba(0,0,0,0.02);
+}
+
+.countdown .card .timer span{
+    font-weight: bold;
+}
+
+.countdown .card .timer>span{
+    font-size: 2rem;
+    color: grey;
+}
+
+.countdown .card .timer div span{
+    font-size:2rem;
+    text-align: center;
+}
+
+.countdown .card .timer div p{
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.875rem;
+    color: #223AFF;
+
+}
+
+.countdown .btn{
+    padding: 20px;
+}
+
+/* About Section CSS */
+#about-section{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    place-items: center;
+}
+
+#about-section h1{
+    color: black;
+}
+
+#about-section p{
+    color: black;
+}
+
+.about-img{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-img img{
+    width: 50%;
+    height: 50%;
+}
+
+.about{
+    padding: 100px;
+}
+
+hr{
+    width: 14%;
+    border: 1px solid #223AFF;
+    background-color: #223AFF;
+}
+
+/* Tokenomics CSS */
+#tokenomics-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+    background-color: #F8F8F8;
+}
+
+#tokenomics-section h1{
+    color: black;
+}
+
+#tokenomics-section p{
+    color: black;
+}
+
+#tokenomics-section hr{
+    border: 1px solid #223AFF;
+    width: 10%;
+}
+
+#tokenomics-section .tokenomics-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#tokenomics-section .tokenomics-info h1{
+    font-size: 2.5rem;
+    font-weight: 1000;
+}
+
+#tokenomics-section .tokenomics-info p{
+    max-width: 70%;
+    text-align: center;
+}
+
+.tokenomics-sec-cards{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 20px;
+    padding: 50px;
+}
+
+.tokenomics-cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    line-height: 40px;
+}
+
+.tokenomics-cards p{
+    text-align: center;
+    line-height: 20px;
+}
+
+.tokenomics-cards h3{
+    color: #223AFF;
+}
+
+/* Roadmap Section CSS */
+#roadmap-section{
+    display: grid;
+    grid-template-rows: 80px 450px;
+    padding: 60px;
+    border: 2px solid black;
+    background-color: #07070D;
+}
+
+.roadmap-head{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    width: 100%;
+}
+
+.roadmap-head>:nth-child(1){
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.roadmap-head hr, h1{
+    line-height: 50px;
+}
+
+.roadmap-head h1, i{
+    color: white;
+}
+
+.roadmap-head i{
+    font-size: 1.5rem;
+}
+
+.slider-btns{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+    gap: 8px;
+}
+
+.slider-btns button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#prev i{
+    color: #9C9C9F;
+}
+
+#left{
+    color: white;
+}
+
+.roadmap-container{
+    width: 100%;
+    padding: 10px;
+}
+
+.roadmap-content1, .roadmap-content2, .roadmap-content3, .roadmap-content4, .roadmap-content5{
+    color: #9C9C9F;
+}
+
+.upper-content{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+}
+
+.progress-container{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    position: relative;
+    width: 100%;
+}
+
+.circle i{
+    color: white;
+}
+
+.active-roadmap{
+    color: white;
+}
+
+.progress-container .active-circle{
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress{
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 3px;
+    width: 100%;
+    z-index: 2;
+    transition: 0.4s ease;
+}
+.circle{
+    background: #07070D;
+    color: black;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 0;
+}
+
+.circle i{
+    font-size: 1.25rem;
+}
+
+.lower-content{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+}
+
+.lower-content ul{
+    text-align: left;
+    line-height: 30px;
+    width: 80%;
+}
+
+/* How to Section CSS */
+#howto-section{
+    display: grid;
+    grid-template-rows: 50px 2fr;
+    padding: 50px;
+    place-items: center;
+    background-color: #223AFF;
+}
+
+#howto-section hr, h1{
+    color: white;
+}
+
+#howto-section hr{
+    border: 1px solid white;
+    width: 60%;
+}
+
+#video{
+    width: 60%;
+    height: 60%;
+    border: 30px;
+}
+
+#video-btn{
+    width: 100px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#video-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Guide section CSS */
+#guide-section{
+    display: grid;
+    grid-template-rows: 50px 50px;
+    padding: 50px;
+    place-items: center;
+}
+
+#guide-section h1,h4,p,hr{
+    color: black;
+}
+
+.guide-head hr{
+    width: 50%;
+}
+
+.guide-card p{
+    color: black;
+    font-size: 0.75rem;
+}
+
+.guide-card{
+    background-color: #F8F8F8;
+    border-radius: 20px;
+    padding: 50px;
+    width: 60%;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+}
+
+.guide-card > div{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 30px;
+    line-height: 20px;
+    place-items: center;
+}
+
+.line{
+    width: 20px;
+    background-color: #9C9C9F;
+    height: 2px;
+}
+
+.bullet{
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+}
+
+/* Contact Us CSS */
+#contactus-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 50px;
+    gap: 100px;
+    background-color: #F8F8F8;
+}
+
+#contactus-section h1,p{
+    color: black;
+}
+
+#contactus-section h1{
+    font-weight: 900;
+}
+
+.contactus-head form{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.input-group{
+    padding-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #9C9C9F;
+    background: none;
+    outline: none;
+}
+
+#contactus-btn{
+    width: 50%;
+    background-color: #223AFF;
+    color: white;
+    padding: 20px 30px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#contactus-btn:hover{
+    background: none;
+    border: none;
+    color: #223AFF;
+    transition: all .5s ease;
+}
+
+
+.community{
+    display: grid;
+    grid-template-rows: 1fr 70px 1fr;
+    padding: 10px;
+}
+
+.community h3{
+    line-height: 40px;
+}
+
+.community p{
+    color: black;
+}
+
+.community > div{
+    display: flex;
+    flex-direction: column;
+}
+
+#copy-address{
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 50px;
+    
+}
+
+#address{
+    overflow: hidden;
+}
+
+#copy-add-btn{
+    border-radius: 50px;
+    border: 1px solid #223AFF;
+    padding: 8px 15px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    background-color: white;
+    cursor: pointer;
+}
+
+#copy-add-btn i{
+    margin: 5px;
+    color: black;
+}
+
+.social-icons-container{
+    display: flex;
+    gap: 10px;
+}
+
+.social-icons{
+    border: 2px solid black;
+    color: black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons i{
+    color: black;
+    font-size: 1.5rem;
+}
+
+/* Footer CSS */
+footer{
+    background-color: #07070D;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    place-items: center;
+}
+
+footer a, i, p{
+    color: white;
+}
+
+footer .social-icons{
+    color: white;
+    border: 2px solid white;
+}
+
+.gotop{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: #223AFF;
+    border: 2px solid white;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 40px;
+    right: 50px;
+}
+
+footer .social-icons i{
+    color: white;
+}
+
+.bottom-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3%;
+    border-top: 2px solid white;
+    width: 100%;
+}
+
+.bottom-nav > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* Media Queries */
+@media all and (max-width: 1024px){
+   .guide-card{
+    width: 70%;
+}
+}
+@media all and (max-width: 900px){
+    header{
+        position: relative;
+    }
+
+    .nav-menu{
+        grid-template-columns: auto;
+        background-color: #223AFF;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 0;
+        transition: all .5s ease;
+        padding: 10px;
+    }
+
+    #navbar-logo{
+        margin-left: 20px;
+    }
+
+    .nav-menu.hamburger-active{
+        background: black;
+        z-index: 2;
+        left: 0;
+        opacity: 1;
+        transition: all .5s ease;
+    }
+
+    .nav-links{
+        text-align: center;
+        line-height: 60px;
+        width: 100%;
+        display: table;
+        color: white;
+    }
+
+    .nav-links:hover{
+        background: darkblue;
+        color: white;
+        border: none;
+    }
+
+    .navbar{
+        width: 100%;
+    }
+
+    .nav-links-btn{
+        background: darkblue;
+        width: 100%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    .nav-links-btn:hover{
+        background: transparent;
+    }
+
+    .active{
+        border-bottom: none;
+    }
+
+    #ham-icon{
+        position: absolute;
+        top: 40%;
+        right: 5%;
+        opacity: 1;
+        cursor: pointer;
+    }
+}
+
+@media all and (max-width: 425px ){
+    #contactus-section{
+        grid-template-columns: 1fr;
+    }
+    
+    #copy-address{
+        width: 61%;
+    }
+}
+
+@media all and (max-width: 220px ){
+
+    #hero-section{
+        grid-template-columns: 1fr;
+    }
+
+    #about-section{
+        grid-template-columns: 1fr;
+    }
+
+    .tokenomics-sec-cards{
+        grid-template-columns: repeat(1, auto);
+    }
+
+    main{
+        width: 600px;
+    }
+
+    main section{
+        width: 600px;
+    }
+
+    footer{
+        padding: 50px;
+    }
+}
+
